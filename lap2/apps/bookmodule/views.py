@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -17,8 +17,8 @@ def viewbook(request, bookId):
     targetBook = book1 if book1['id'] == bookId else (book2 if book2['id'] == bookId else None)
     return render(request, 'bookmodule/index.html', {'book': targetBook}) # [cite: 159]
 
-=======
+
 from django.shortcuts import render
 
 # Create your views here.
->>>>>>> origin/main
+

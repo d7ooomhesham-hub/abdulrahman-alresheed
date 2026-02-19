@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 import os
-=======
->>>>>>> origin/main
+
+
 """
 Django settings for libraryproject project.
 
@@ -60,11 +60,11 @@ ROOT_URLCONF = 'libraryproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
+
         'DIRS': [os.path.join(BASE_DIR, 'apps/templates')],
-=======
-        'DIRS': [],
->>>>>>> origin/main
+
+       
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
