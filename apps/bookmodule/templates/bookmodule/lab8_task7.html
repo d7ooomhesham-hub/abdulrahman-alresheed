@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    <h2>Students count per City (Lab 8 - Task 7)</h2>
+    <table border="1">
+        <tr>
+            <th>City</th>
+            <th>Number of Students</th>
+        </tr>
+        {% for city in cities %}
+        <tr>
+            <td>{{ city.city }}</td>
+            <td>{{ city.student_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

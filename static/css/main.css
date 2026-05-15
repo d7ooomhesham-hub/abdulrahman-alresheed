@@ -1,0 +1,23 @@
+/* تنسيق الروابط لـ Task 1 */
+.custom-link {
+    display: block; /* يظهر ككتلة واحدة */
+    padding: 15px;
+    text-align: center;
+    margin: 10px auto;
+    width: 50%;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+/* حالات الرابط المختلفة */
+.custom-link:visited { color: #6f42c1; } /* بعد الزيارة */
+.custom-link:hover { background-color: #e2e6ea; color: #0056b3; } /* عند مرور الماوس */
+.custom-link:active { background-color: #dae0e5; color: red; } /* عند الضغط */
+
+/* تنسيق العنوان لـ Task 2 */
+.format-header {
+    color: #17a2b8;
+    text-align: center;
+}

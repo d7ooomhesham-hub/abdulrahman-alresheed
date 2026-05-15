@@ -1,0 +1,15 @@
+<h2>Task 1: Books Availability Percentage</h2>
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Availability %</th>
+    </tr>
+    {% for b in books %}
+    <tr>
+        <td>{{ b.title }}</td>
+        <td>{{ b.quantity }}</td>
+        <td>{{ b.availability_percentage|stringformat:".2f" }}%</td>
+    </tr>
+    {% endfor %}
+</table>

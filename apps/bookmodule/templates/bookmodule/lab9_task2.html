@@ -1,0 +1,14 @@
+<h3>Task 2: Publishers & Total Book Stock</h3>
+<table border="1">
+    <tr>
+        <th>Publisher Name</th>
+        <th>Total Stock (Quantity)</th>
+    </tr>
+    {% for pub in publishers %}
+    <tr>
+        <td>{{ pub.name }}</td>
+        <td>{{ pub.total_stock|default:0 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'books:index' %}">Back Home</a>

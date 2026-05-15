@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Book - Lab 10</title>
+</head>
+<body>
+    <h2>Edit Book (Part 1: Manual Form)</h2>
+    
+    <!-- نرسل رقم الكتاب (id) في الأكشن ليعرف السيرفر أي كتاب يعدل -->
+    <form method="POST" action="{% url 'books:lab10_editbook' book.id %}">
+        {% csrf_token %}
+        
+        <div>
+            <label>Book Title:</label><br>
+            <!-- نستخدم خاصية value لعرض البيانات القديمة -->
+            <input type="text" name="title" value="{{ book.title }}" required>
+        </div><br>
+
+        <div>
+            <label>Price:</label><br>
+            <input type="number" step="0.01" name="price" value="{{ book.price }}" required>
+        </div><br>
+
+        <div>
+            <label>Quantity:</label><br>
+            <input type="number" name="quantity" value="{{ book.quantity }}" required>
+        </div><br>
+
+        <div>
+            <label>Rating (1-5):</label><br>
+            <input type="number" name="rating" min="1" max="5" value="{{ book.rating }}" required>
+        </div><br>
+
+        <button type="submit">Update Book</button>
+        <a href="{% url 'books:lab10_listbooks' %}">Cancel</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h2>Task 5: Publishers with High Rated Books</h2>
+<ul>
+    {% for pub in publishers %}
+    <li>{{ pub.name }} - Count of high rated books: {{ pub.high_rated_count }}</li>
+    {% endfor %}
+</ul>

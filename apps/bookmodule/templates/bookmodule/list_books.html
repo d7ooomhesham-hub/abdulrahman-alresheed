@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} List of Books {% endblock title %}
+
+{% block content %}
+    <h1>List of Books</h1>
+
+    {% for category, books in books_data.items %}
+        <h2>{{ category }}</h2>
+        <div class="books-container" style="display: flex; gap: 20px; margin-bottom: 30px;">
+            
+            {% for book in books %}
+                <div class="book-item">
+                   <img src="{% static book.image_path %}" width="150" alt="{{ book.title }}"> 
+                    <p>{{ book.title }}</p>
+                </div>
+            {% endfor %}
+            
+        </div>
+    {% endfor %}
+
+{% endblock content %}

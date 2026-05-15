@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="topnav">
+        <a href="{% url 'books:index' %}">Home</a>
+    </div>
+    
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div style="padding: 20px;">
+    <h2>Search Results</h2>
+    
+    {% if books %}
+        <p>Found {{ books|length }} book(s):</p>
+        <ul border="1">
+            {% for book in books %}
+                <li>
+                    <strong>Title:</strong> {{ book.title }} <br>
+                    <strong>Author:</strong> {{ book.author }} <br>
+                    <strong>ID:</strong> {{ book.id }}
+                </li>
+                <hr>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p style="color: red;">No books found matching your search criteria.</p>
+    {% endif %}
+
+    <br>
+   <a href="{% url 'books:index' %}">Go back to Home</a>
+</div>
+{% endblock %}

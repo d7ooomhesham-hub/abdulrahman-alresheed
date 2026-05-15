@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}Book Details{% endblock title %}
+
+{% block content %}
+    <h1>تفاصيل الكتاب</h1>
+    <div class="book-detail">
+        <h2>عنوان الكتاب: {{ bookId }}</h2>
+        <p>هذا هو تفصيل الكتاب الذي اخترته برقم: {{ bookId }}</p>
+    </div>
+{% endblock content %}

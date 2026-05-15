@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block content %}
+    <h1>مرحباً بك في مكتبتنا الرقمية!</h1>
+    <p>هذه الصفحة الرئيسية للموقع.</p>
+    <a href="{% url 'books:list_books' %}">تصفح الكتب</a>
+{% endblock content %}

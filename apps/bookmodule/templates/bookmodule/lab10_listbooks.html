@@ -1,0 +1,19 @@
+<h2>Books Inventory (Lab 10 - Part 1)</h2>
+<a href="{% url 'books:lab10_addbook' %}">Add New Book</a>
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    {% for b in books %}
+    <tr>
+        <td>{{ b.title }}</td>
+        <td>{{ b.price }}</td>
+        <td>
+            <a href="{% url 'books:lab10_editbook' b.id %}">Edit</a> | 
+            <a href="{% url 'books:lab10_deletebook' b.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

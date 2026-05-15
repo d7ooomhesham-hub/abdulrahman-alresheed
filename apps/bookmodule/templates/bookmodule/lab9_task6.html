@@ -1,0 +1,15 @@
+<h3>Task 6: Filtered Books Count per Publisher</h3>
+<p>(Price > 50 and 1 <= Quantity < 5)</p>
+<table border="1">
+    <tr>
+        <th>Publisher Name</th>
+        <th>Count of Matching Books</th>
+    </tr>
+    {% for pub in publishers %}
+    <tr>
+        <td>{{ pub.name }}</td>
+        <td>{{ pub.filtered_count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'books:index' %}">Back Home</a>
